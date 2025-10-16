@@ -1,0 +1,642 @@
+[
+  {
+    "source_path": ["applicantDetails", "0", "entityName"],
+    "destination_path": ["applicant_name_first"],
+    "transform_type": "copy",
+    "required": true,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantDetails", "0", "entityName"],
+    "destination_path": ["applicant_name_last"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantDetails", "0", "entityName"],
+    "destination_path": ["applicant_name_middle"],
+    "transform_type": "toString",
+    "transform_logic": "\"\"",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantDetails", "0", "relationship"],
+    "destination_path": ["applicant_relation_type"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "Self"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "mobileNo"],
+    "destination_path": ["applicant_mobile"],
+    "transform_type": "copy",
+    "required": true,
+    "default_value": ""
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "clientMailId"],
+    "destination_path": ["applicant_email"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantDetails", "0", "dob"],
+    "destination_path": ["applicant_DOB"],
+    "transform_type": "formatDate",
+    "required": true,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantKyc", "0", "panNumber"],
+    "destination_path": ["applicant_panno"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "Not Provided"
+  },
+  {
+    "source_path": ["applicantKyc", "0", "aadhaarNumber"],
+    "destination_path": ["applicant_uidno"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "Not Provided"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "fatherName"],
+    "destination_path": ["applicant_related_party_name"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantDetails", "0", "fatherName"],
+    "destination_path": ["applicant_mother_name"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantAddressDetails", "0", "address"],
+    "destination_path": ["applicant_address"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantAddressDetails", "0", "pincode"],
+    "destination_path": ["applicant_pincode"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantAddressDetails", "0", "district"],
+    "destination_path": ["applicant_city"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantDetails", "0", "profession"],
+    "destination_path": ["applicant_ocupation"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "SERVICE"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "qualification"],
+    "destination_path": ["applicant_Edu_Qualification_code"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"GRADUATE\" ? 18 : 1",
+    "required": false,
+    "default_value": "18"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "earningPerMonth"],
+    "destination_path": ["monthly_income"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "loanId"],
+    "destination_path": ["app_id"],
+    "transform_type": "copy",
+    "required": true,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "loanId"],
+    "destination_path": ["application_no"],
+    "transform_type": "copy",
+    "required": true,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "loanApplicationSubmittedDate"],
+    "destination_path": ["apply_date"],
+    "transform_type": "formatDate",
+    "required": true,
+    "default_value": ""
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "approvedonDate"],
+    "destination_path": ["sanction_date"],
+    "transform_type": "formatDate",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["dbmaker", "0", "disbursementDate"],
+    "destination_path": ["disbursement_date"],
+    "transform_type": "formatDate",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["dbmaker", "0", "firstRepaymentDate"],
+    "destination_path": ["emi_start_date"],
+    "transform_type": "formatDate",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "loanAmount"],
+    "destination_path": ["CCDetails", "snctionLimit"],
+    "transform_type": "copy",
+    "required": true,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["dbmaker", "0", "emi"],
+    "destination_path": ["CCDetails", "EMI_AMOUNT"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["dbmaker", "0", "noOfRepayment"],
+    "destination_path": ["CCDetails", "No_of_EMI"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["dbmaker", "0", "interestRate"],
+    "destination_path": ["CCDetails", "app_Loan_ROI_SlabRate1"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "loanAmount"],
+    "destination_path": ["CCDetails", "app_Loan_ROI_SlabAmount1"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["dbmaker", "0", "NetDisbursementAmount"],
+    "destination_path": ["disbursement_amount"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["dbmaker", "0", "TotalInterestAmount"],
+    "destination_path": ["interest_amount"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["chargesDetails", "0", "chargeAmount"],
+    "destination_path": ["app_processing_fee"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["chargesDetails", "0", "chargeAmount"],
+    "destination_path": ["app_documentation_fee"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "currentDate"],
+    "destination_path": ["current_date"],
+    "transform_type": "formatDate",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "loanStatus"],
+    "destination_path": ["application_status"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"Loan Approved\" ? \"A\" : \"P\"",
+    "required": false,
+    "default_value": "P"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "economicallyWeakerSection"],
+    "destination_path": ["applicant_cast"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"Yes\" ? \"SC\" : \"GEN\"",
+    "required": false,
+    "default_value": "GEN"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "incomeStability"],
+    "destination_path": ["applicant_statutoryDeduction"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"Stable\" ? 0 : 1",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "profession"],
+    "destination_path": ["applicant_Service_type_code"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"SALARIED\" ? \"S\" : \"O\"",
+    "required": false,
+    "default_value": "O"
+  },
+  {
+    "source_path": ["applicantAddressDetails", "0", "addressType"],
+    "destination_path": ["house_ownership_self_parent_rent"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "personWithDisability"],
+    "destination_path": ["App_IT_Payee"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"No\" ? \"Y\" : \"N\"",
+    "required": false,
+    "default_value": "Y"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "yearsInCurrentOfficeOrIndustry"],
+    "destination_path": ["year_in_service"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "employmentType"],
+    "destination_path": ["Employer_type"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"Full time\" ? 1 : 0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantLiabilitiesDetails", "0", "outStandingAmount"],
+    "destination_path": ["Liab_values"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantLiabilitiesDetails", "0", "financerAmount"],
+    "destination_path": ["Assets_value"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value) / 5",
+    "required": false,
+    "default_value": "100000"
+  },
+  {
+    "source_path": ["applicantLiabilitiesDetails", "0", "outStandingAmount"],
+    "destination_path": ["deduction_in_exist_loan"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantCreditDetails", "0", "creditScore"],
+    "destination_path": ["application_score"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "yearsInCurrentOfficeOrIndustry"],
+    "destination_path": ["Income_above_limit_years"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantLiabilitiesDetails", "0", "loanClassification"],
+    "destination_path": ["CCDetails", "securityCode"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"Secured\" ? 68 : 69",
+    "required": false,
+    "default_value": "69"
+  },
+  {
+    "source_path": ["foirandltv", "0", "LTV"],
+    "destination_path": ["CCDetails", "securityValue"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "loanProduct"],
+    "destination_path": ["CCDetails", "crType"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"testing1\" ? 12 : 1",
+    "required": false,
+    "default_value": "12"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "incomeSource"],
+    "destination_path": ["Loan_purpose_code"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"Self-Employed (Non-Professional)\" ? 46 : 1",
+    "required": false,
+    "default_value": "46"
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "loanProduct"],
+    "destination_path": ["Loan_Category_code"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"testing1\" ? 7 : 1",
+    "required": false,
+    "default_value": "7"
+  },
+  {
+    "source_path": ["loanClientDetails", "0", "sourcing"],
+    "destination_path": ["Service_branch"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"selfSourced\" ? \"002\" : \"001\"",
+    "required": false,
+    "default_value": "002"
+  },
+  {
+    "source_path": ["applicantDetails", "0", "loanId"],
+    "destination_path": ["applicant_LoanHead_id"],
+    "transform_type": "toString",
+    "transform_logic": "value > 0 ? 3 : 1",
+    "required": false,
+    "default_value": "3"
+  },
+  {
+    "source_path": ["applicantAddressDetails", "0", "address"],
+    "destination_path": ["applicant_address_otherLang"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantDetails", "0", "entityName"],
+    "destination_path": ["applicant_name_othLang"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["applicantBankDetails", "0", "mobileNo"],
+    "destination_path": ["applicant_phone"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["guarantorDetails"],
+    "destination_path": ["CCDetails", "Gurantor_available"],
+    "transform_type": "toString",
+    "transform_logic": "len(value) > 0 ? \"Y\" : \"N\"",
+    "required": false,
+    "default_value": "N"
+  },
+  {
+    "source_path": ["guarantorDetails", "0", "entityName"],
+    "destination_path": ["CCDetails", "Gurantor_name"],
+    "transform_type": "copy",
+    "required": false,
+    "default_value": ""
+  },
+  {
+    "source_path": ["guarantorDetails", "0", "profession"],
+    "destination_path": ["CCDetails", "Gurantor_Service_type_code"],
+    "transform_type": "toString",
+    "transform_logic": "value == \"SALARIED\" ? \"S\" : \"O\"",
+    "required": false,
+    "default_value": "O"
+  },
+  {
+    "source_path": ["applicantDetails"],
+    "destination_path": ["No_of_year_at_cur_residence"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantDetails"],
+    "destination_path": ["No_of_dependent"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["cgst_processing_fee"],
+    "transform_type": "toString",
+    "transform_logic": "763",
+    "required": false,
+    "default_value": "763"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["sgst_processing_fee"],
+    "transform_type": "toString",
+    "transform_logic": "763",
+    "required": false,
+    "default_value": "763"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["igst_processing_fee"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["gst_processing_fee"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["cgst_documentation_fee"],
+    "transform_type": "toString",
+    "transform_logic": "90",
+    "required": false,
+    "default_value": "90"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["sgst_documentation_fee"],
+    "transform_type": "toString",
+    "transform_logic": "90",
+    "required": false,
+    "default_value": "90"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["igst_documentation_fee"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["gst_documentation_fee"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["chargesDetails"],
+    "destination_path": ["loan_insurance_fee"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "EMI_Periodicity"],
+    "transform_type": "toString",
+    "transform_logic": "\"M\"",
+    "required": false,
+    "default_value": "M"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "Gurantor_included"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "snctionAutho"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "Gurantor_Emptype"],
+    "transform_type": "toString",
+    "transform_logic": "\"0\"",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "app_Loan_ROI_SlabAmount2"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "app_Loan_ROI_SlabAmount3"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "app_Loan_ROI_SlabRate2"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["CCDetails"],
+    "destination_path": ["CCDetails", "app_Loan_ROI_SlabRate3"],
+    "transform_type": "toString",
+    "transform_logic": "0",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantKyc"],
+    "destination_path": ["documents", "KYC Document"],
+    "transform_type": "toString",
+    "transform_logic": "[]",
+    "required": false,
+    "default_value": "[]"
+  },
+  {
+    "source_path": ["loanDetails", "0", "disbursementDate"],
+    "destination_path": ["CCDetails", "loanDisbursementDetails"],
+    "transform_type": "toString",
+    "transform_logic": "[{\"expectedDisbursementDate\": \"2025-06-23T00:00:00\", \"principal\": 350000}]",
+    "required": false,
+    "default_value": "[]"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "earningPerMonth"],
+    "destination_path": ["monthly_income"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "yearsInCurrentOfficeOrIndustry"],
+    "destination_path": ["year_in_service"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantIncomeDetails", "0", "yearsInCurrentOfficeOrIndustry"],
+    "destination_path": ["Income_above_limit_years"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  },
+  {
+    "source_path": ["applicantCreditDetails", "0", "creditScore"],
+    "destination_path": ["application_score"],
+    "transform_type": "toString",
+    "transform_logic": "parseFloat(value)",
+    "required": false,
+    "default_value": "0"
+  }
+]

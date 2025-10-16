@@ -1,0 +1,21 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F7CFF" />
+      <stop offset="50%" stop-color="#6B8FFF" />
+      <stop offset="100%" stop-color="#8BA3FF" />
+    </linearGradient>
+  </defs>
+  
+  <!-- K logo with gradient -->
+  <g>
+    <!-- First K shape -->
+    <path d="M20 20 L20 80 L30 80 L30 55 L50 80 L65 80 L40 50 L63 20 L50 20 L30 40 L30 20 Z" fill="url(#gradient1)"/>
+    
+    <!-- Second overlapping K shape -->
+    <path d="M35 15 L35 75 L45 75 L45 50 L65 75 L80 75 L55 45 L78 15 L65 15 L45 35 L45 15 Z" fill="url(#gradient1)" opacity="0.8"/>
+  </g>
+  
+  <!-- UGELBLITZ text -->
+  <text x="100" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#1F2937">UGELBLITZ</text>
+</svg>

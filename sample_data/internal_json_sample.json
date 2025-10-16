@@ -1,0 +1,219 @@
+{
+  "InputData": {
+    "applicantDetails": [
+      {
+        "loanId": 5571,
+        "accountNo": "000005571",
+        "profileUrl": "https://default-doc-testing-dest.s3.ap-south-1.amazonaws.com//root/.fineract/default/images/clients/861/1749815075983450.jpeg",
+        "entityType": "Applicant",
+        "entityName": "Shyam Chuoudhary",
+        "mobileNo": "9876789876",
+        "fatherName": "Prabhu",
+        "qualification": "GRADUATE",
+        "gender": "MALE",
+        "relationship": "Self",
+        "profession": "SALARIED",
+        "personWithDisability": "No",
+        "economicallyWeakerSection": "No",
+        "dob": "07-March-2001"
+      }
+    ],
+    "applicantKyc": [
+      {
+        "loanId": 5571,
+        "entityType": "Applicant",
+        "entityName": "Shyam Chuoudhary",
+        "panNumber": "CBSPJ8459D",
+        "voterNumber": "Not Provided",
+        "rationNumber": "Not Provided",
+        "dlNumber": "Not Provided",
+        "aadhaarNumber": "XXXXXXXX7362"
+      }
+    ],
+    "applicantAddressDetails": [
+      {
+        "loanId": 5571,
+        "accountNo": "000005571",
+        "entityType": "Applicant",
+        "entityName": "Shyam Chuoudhary",
+        "mobileNo": "9876789876",
+        "address": "123 Jothwara,Kuchaman,NOKHA,JAIPUR,Nagaur,Rajasthan,India,341508",
+        "addressType": "Parental",
+        "addressSubType": "Permanent",
+        "latLong": "",
+        "addressLine1": "123 Jothwara",
+        "addressLine2": "-",
+        "landmark": "Kuchaman",
+        "tehsil": "NOKHA",
+        "district": "Nagaur",
+        "state": "Rajasthan",
+        "pincode": "341508",
+        "country": "India"
+      }
+    ],
+    "applicantIncomeDetails": [
+      {
+        "loanId": 5571,
+        "earningPerMonth": "22500.000000",
+        "occupation": "-",
+        "incomeSource": "Self-Employed (Non-Professional)",
+        "organisationName": "-",
+        "workProfile": "SDFGHJKL",
+        "turnover": "45000",
+        "margin": "50.000000",
+        "verficationMethod": "-",
+        "isNobleProfession": "-",
+        "isVerified": "-",
+        "yearsInCurrentOfficeOrIndustry": "2.5",
+        "employerInformation": "-",
+        "designation": "-",
+        "incomeStability": "Stable",
+        "workPlace": "-",
+        "buisnessType": "-",
+        "verifcationMethod": "-",
+        "employmentType": "Full time",
+        "jobRole": "-",
+        "specifyJobRole": "Cashier",
+        "specifyIndustry": "-",
+        "userName": "-"
+      }
+    ],
+    "applicantCreditDetails": [
+      {
+        "loanId": 5571,
+        "entityType": "Applicant",
+        "entityName": "Shyam Chuoudhary",
+        "customerName": "Shyam Chuoudhary",
+        "creditBureauName": "CIBIL",
+        "creditReportName": "consumerCore",
+        "creditScore": "750",
+        "numberOfAccounts": 2,
+        "overdueAccounts": 0,
+        "dpd": "0",
+        "decision": "POSITIVE",
+        "remarks": "XBN",
+        "status": "Excellent (No DPD in any Loans)"
+      }
+    ],
+    "applicantBankDetails": [
+      {
+        "loanId": 5571,
+        "entityType": "Applicant",
+        "entityName": "Shyam Chuoudhary",
+        "accountHolderName": "ASDFGHJ",
+        "bankAccountNumber": "87654321",
+        "last4BankAccountNumber": "4321",
+        "bankName": "AXIS BANK",
+        "ifscCode": "UTIB0000400",
+        "branchName": "CREDIT CARD OPERATIONS",
+        "bankAccountType": "Current Account",
+        "isPrimaryBankAccount": "No",
+        "mobileNo": "9876789876"
+      }
+    ],
+    "applicantLiabilitiesDetails": [
+      {
+        "loanId": 5571,
+        "entityType": "Applicant",
+        "entityName": "Shyam Chuoudhary",
+        "loanClassification": "Secured",
+        "secureLoanType": "Home Loan",
+        "unsecureLoanType": "-",
+        "fetchedLoanType": "-",
+        "securityDetails": "-",
+        "loanOwnershipType": "Individual",
+        "financerAmount": "500000",
+        "outStandingAmount": "50000",
+        "totalNumberEmi": "24",
+        "emiAmount": "8000",
+        "emiPaid": "0",
+        "repaymentStatusType": "Regular",
+        "borrowingReason": "sdfghjkl",
+        "metrics": "1",
+        "metricsValue": "-",
+        "remarks": "-",
+        "isVerified": "Non-Verified"
+      }
+    ],
+    "chargesDetails": [
+      {
+        "loanId": 5571,
+        "chargeName": "new disbursement charge",
+        "chargeAmount": "1500.00",
+        "FalseAmountOrPercentageasApplicable": 0,
+        "TrueAmountOrPercentageasApplicable": 0,
+        "tOnetimeRecurring": "-",
+        "fOnetimeRecurring": "One Time",
+        "dueForCollectionDate": "-",
+        "chargeType": "Disbursement",
+        "chargePaymentStatus": "Not Collected",
+        "chargeAmountCollected": "-",
+        "chargeAmountOutstanding": "1500.00"
+      }
+    ],
+    "dbmaker": [
+      {
+        "loanId": 5571,
+        "principalAmount": 350000,
+        "interestWaived": 0,
+        "principalOutstanding": 0,
+        "LoanApprovedDate": "10-June-2025",
+        "approvedPrincipalAmount": 350000,
+        "interestRate": 18,
+        "disbursementDate": "2025-06-23",
+        "noOfRepayment": 24,
+        "apr": 18.37,
+        "emi": 17473,
+        "NetDisbursementAmount": 348500,
+        "firstRepaymentDate": "06-July-2025",
+        "lastRepaymentDate": "06-June-2027",
+        "interestMethod": "DECLINING",
+        "TotalInterestAmount": 69364.48,
+        "totalCharges": 1500,
+        "TotalAmountToBePaidByTheBorrower": 419364.48,
+        "mainRoiTenantSpecific": "9.91 % (Flat)",
+        "overdueCharge": "0",
+        "emiAmountFirst": 17473,
+        "emiAmountSecond": 17473,
+        "loanApprovedBy": "Anita Muwal"
+      }
+    ],
+    "foirandltv": [
+      {
+        "loanId": 5571,
+        "foir": null,
+        "LTV": "950000"
+      }
+    ],
+    "loanClientDetails": [
+      {
+        "loanId": 5571,
+        "accountNo": "000005571",
+        "emiAmount": 17473,
+        "frequencyOfRepayment": "Monthly",
+        "loanStatusId": 200,
+        "loanApplicationSubmittedDate": "06-June-2025",
+        "approvedonDate": "10-June-2025",
+        "loanStatus": "Loan Approved",
+        "loanProduct": "testing1",
+        "sourcing": "selfSourced",
+        "internalSource": "pranshu agarwal",
+        "clientName": "Shyam Chuoudhary",
+        "clientType": "Individual",
+        "clientAge": 24,
+        "clientMailId": "TEST@GMAIL.COM",
+        "mobileNo": "9876789876",
+        "loanAmount": 350000,
+        "clientGender": "MALE",
+        "dateOfBirth": "07-March-2001",
+        "qualification": "GRADUATE",
+        "professional": "SALARIED",
+        "fatherName": "Prabhu",
+        "roi": 18,
+        "tenure": 24,
+        "currentDate": "18-June-2025"
+      }
+    ],
+    "guarantorDetails": []
+  }
+}

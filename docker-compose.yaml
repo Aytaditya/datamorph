@@ -1,0 +1,8 @@
+services:
+  data_mapping:
+    build: .
+    container_name: data_mapping_service
+    ports:
+      - "3000:3000"
+    environment:
+      - GO_ENV=production

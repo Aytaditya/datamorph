@@ -1,0 +1,122 @@
+[
+  {
+    "source_path": "applicantDetails.0.entityName",
+    "destination_path": "applicant_name_first",
+    "transform_type": "copy",
+    "transform_logic": "",
+    "default_value": "",
+    "required": true
+  },
+  {
+    "source_path": "applicantDetails.0.mobileNo",
+    "destination_path": "applicant_mobile",
+    "transform_type": "copy",
+    "transform_logic": "",
+    "default_value": "",
+    "required": true
+  },
+  {
+    "source_path": "applicantDetails.0.gender",
+    "destination_path": "applicant_gender",
+    "transform_type": "mapGender",
+    "transform_logic": "",
+    "default_value": "Unknown",
+    "required": false
+  },
+  {
+    "source_path": "applicantDetails.0.fatherName",
+    "destination_path": "applicant_related_party_name",
+    "transform_type": "copy",
+    "transform_logic": "",
+    "default_value": "",
+    "required": false
+  },
+  {
+    "source_path": "applicantDetails.0.qualification",
+    "destination_path": "applicant_qualification",
+    "transform_type": "toUpperCase",
+    "transform_logic": "",
+    "default_value": "NOT_SPECIFIED",
+    "required": false
+  },
+  {
+    "source_path": "applicantDetails.0.profession",
+    "destination_path": "applicant_profession",
+    "transform_type": "capitalize",
+    "transform_logic": "",
+    "default_value": "Other",
+    "required": false
+  },
+  {
+    "source_path": "applicantDetails.0.dob",
+    "destination_path": "applicant_age",
+    "transform_type": "expression",
+    "transform_logic": "2025 - int(split(value, '-')[2])",
+    "default_value": "0",
+    "required": false
+  },
+  {
+    "source_path": "applicantKyc.0.panNumber",
+    "destination_path": "applicant_pan",
+    "transform_type": "toUpperCase",
+    "transform_logic": "",
+    "default_value": "",
+    "required": false
+  },
+  {
+    "source_path": "applicantKyc.0.aadhaarNumber",
+    "destination_path": "applicant_aadhaar",
+    "transform_type": "copy",
+    "transform_logic": "",
+    "default_value": "",
+    "required": false
+  },
+  {
+    "source_path": "applicantAddressDetails.0.addressLine1",
+    "destination_path": "applicant_address_line1",
+    "transform_type": "copy",
+    "transform_logic": "",
+    "default_value": "",
+    "required": false
+  },
+  {
+    "source_path": "applicantAddressDetails.0.district",
+    "destination_path": "applicant_district",
+    "transform_type": "capitalize",
+    "transform_logic": "",
+    "default_value": "",
+    "required": false
+  },
+  {
+    "source_path": "applicantAddressDetails.0.state",
+    "destination_path": "applicant_state",
+    "transform_type": "capitalize",
+    "transform_logic": "",
+    "default_value": "",
+    "required": false
+  },
+  {
+    "source_path": "applicantAddressDetails.0.pincode",
+    "destination_path": "applicant_pincode",
+    "transform_type": "toString",
+    "transform_logic": "",
+    "default_value": "",
+    "required": false
+  },
+  {
+    "source_path": "applicantDetails.0.loanId",
+    "destination_path": "app_id",
+    "transform_type": "copy",
+    "transform_logic": "",
+    "default_value": "",
+    "required": true
+  },
+  {
+    "source_path": "applicantDetails.0.relationship",
+    "destination_path": "applicant_relation_type",
+    "transform_type": "capitalize",
+    "transform_logic": "",
+    "default_value": "Self",
+    "required": false
+  }
+]
